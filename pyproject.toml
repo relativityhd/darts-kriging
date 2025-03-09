@@ -1,0 +1,30 @@
+[project]
+name = "darts-kriging"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datashader>=0.17.0",
+    "geopandas>=1.0.1",
+    "geoviews>=1.14.0",
+    "gstools[rust]>=1.6.1",
+    "holoviews>=1.20.1",
+    "hvplot>=0.11.2",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "jupyter-bokeh>=4.0.5",
+    "odc-geo>=0.4.10",
+    "polars>=1.24.0",
+    "pyarrow>=19.0.1",
+    "pykrige>=1.7.2",
+    "pysal>=25.1",
+    "rich>=13.9.4",
+    "scipy>=1.15.2",
+    "seaborn>=0.13.2",
+    "smart-geocubes[stac,viz]",
+    "xarray>=2025.1.2",
+]
+
+[tool.uv.sources]
+smart-geocubes = { path = "../smart-geocubes", editable = true }
