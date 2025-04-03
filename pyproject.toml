@@ -5,9 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "cupy-cuda12x>=13.4.1",
+    "cupy-xarray",
+    "dask>=2025.2.0,<2025.3.0",
     "datashader>=0.17.0",
     "geopandas>=1.0.1",
     "geoviews>=1.14.0",
+    "gstools-core>=1.0.0",
     "gstools[rust]>=1.6.1",
     "holoviews>=1.20.1",
     "hvplot>=0.11.2",
@@ -15,16 +19,19 @@ dependencies = [
     "ipywidgets>=8.1.5",
     "jupyter-bokeh>=4.0.5",
     "odc-geo>=0.4.10",
+    "odc-stac>=0.3.11",
     "polars>=1.24.0",
     "pyarrow>=19.0.1",
     "pykrige>=1.7.2",
     "pysal>=25.1",
     "rich>=13.9.4",
+    "scikit-gstat>=1.0.19",
     "scipy>=1.15.2",
     "seaborn>=0.13.2",
-    "smart-geocubes[stac,viz]",
+    "smart-geocubes[stac,viz]>=0.0.3",
     "xarray>=2025.1.2",
+    "xarray-spatial>=0.4.0",
 ]
 
 [tool.uv.sources]
-smart-geocubes = { path = "../smart-geocubes", editable = true }
+cupy-xarray = { git = "https://github.com/xarray-contrib/cupy-xarray" }
